@@ -1,0 +1,31 @@
+ILMerge version 2.12.803.0
+Copyright (C) Microsoft Corporation 2004-2006. All rights reserved.
+ILMerge /log:log.txt /allowDup /t:library /out:MergedLibrary.dll Common.dll PluginProject.dll 
+Set platform to 'v2', using directory 'C:\Windows\Microsoft.NET\Framework64\v2.0.50727\..\v2.0.50727' for mscorlib.dll
+Running on Microsoft (R) .NET Framework v2.0.50727
+mscorlib.dll version = 2.0.0.0
+The list of input assemblies is:
+	Common.dll
+	PluginProject.dll
+Trying to read assembly from the file 'C:\Program Files (x86)\Microsoft\ILMerge\Common.dll'.
+Can not find PDB file. Debug info will not be available for assembly 'Common.dll'.
+	Successfully read in assembly.
+	There were no errors reported in Common's metadata.
+Trying to read assembly from the file 'C:\Program Files (x86)\Microsoft\ILMerge\PluginProject.dll'.
+Can not find PDB file. Debug info will not be available for assembly 'PluginProject.dll'.
+	Successfully read in assembly.
+	There were no errors reported in PluginProject's metadata.
+Checking to see that all of the input assemblies have a compatible PeKind.
+	Common.PeKind = ILonly
+	PluginProject.PeKind = ILonly
+All input assemblies have a compatible PeKind value.
+Using assembly 'Common' for assembly-level attributes for the target assembly.
+Merging assembly 'Common' into target assembly.
+Merging assembly 'PluginProject' into target assembly.
+Duplicate type name: modifying name of the type 'Common.LicenceManager' (from assembly 'PluginProject') to 'PluginProject1258.LicenceManager'
+Copying 1 Win32 Resources from assembly 'Common' into target assembly.
+	There were no errors reported in the target assembly's metadata.
+ILMerge: Writing target assembly 'MergedLibrary.dll'.
+Location for referenced assembly 'mscorlib' is 'C:\Windows\Microsoft.NET\Framework64\v2.0.50727\mscorlib.dll'
+	There were no errors reported in  mscorlib's metadata.
+ILMerge: Done.
