@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExercisesNETFramework", "Ex
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsynchronousWPF", "AsynchronousWPF\AsynchronousWPF.csproj", "{14168DD2-25DE-4903-AC3C-03EECD56D1BE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DIProject", "..\..\..\..\source\repos\Szkolenie\SII_CSharpDeveloper\DIProject\DIProject.csproj", "{419815D7-4F2A-453B-B472-B953C362AE41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DIProject", "DiProject\DIProject.csproj", "{419815D7-4F2A-453B-B472-B953C362AE41}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
