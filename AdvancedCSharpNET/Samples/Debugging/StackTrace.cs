@@ -12,7 +12,10 @@ namespace AdvancedCSharp.Samples.Debugging
             {
                 if (localVal <= 5)
                 {
+                    var sw = Stopwatch.StartNew();
                     InnerMethod();
+                    sw.Stop();
+                    Console.WriteLine($"InnerMethod executed within {sw.ElapsedMilliseconds}ms");
                 }
                 localVal = 7;
             }

@@ -55,15 +55,25 @@ namespace AdvancedCSharp.Samples.Extensions
         }
 
 
-        public static string GetAssemblyRootPath(this Assembly assembly)
+        public static string GetAssemblyRootPath(this Assembly assembly, string relativePath)
         {
             return Path.GetDirectoryName(new Uri(assembly.Location).LocalPath);
-        }
+
+
+            var assemb = Assembly.GetExecutingAssembly();
+
+            assemb.GetAssemblyRootPath("C:\\");
+            }
 
         public static bool IsValidEmailAddress(this string email)
         {
+
             System.Text.RegularExpressions.Regex regex = new System.Text.RegularExpressions.Regex(@"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$");
             return regex.IsMatch(email);
+
+
+
+            var isEmail = "pawel@gmail.com".IsValidEmailAddress();
         }
     }
 }

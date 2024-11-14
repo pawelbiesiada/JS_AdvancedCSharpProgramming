@@ -53,7 +53,8 @@ namespace WebApiSample.Controllers
         [Route("singleforecastpost")]
         public WeatherForecast GetForecastPost([FromHeader] string temp)
         {
-            //Request.Headers.TryGetValue("temp", out var tValue);
+//            Request.Headers.TryGetValue("temp", out var tValue);
+
 
             return new WeatherForecast
             {

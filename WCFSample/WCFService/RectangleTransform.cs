@@ -2,7 +2,6 @@
 
 namespace WCFService
 {
-        [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerCall)]
     public class RectangleTransform : IShapeTransformation
     {
         public RectangleTransform()

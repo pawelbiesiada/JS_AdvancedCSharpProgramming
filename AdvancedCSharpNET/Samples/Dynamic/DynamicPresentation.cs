@@ -10,12 +10,14 @@ namespace AdvancedCSharp.Samples.Dynamic
         {
             byte b = 1;
             dynamic d = b;
+            Console.ReadLine();
+
             Console.WriteLine("Value: {0} \tType: {1}", d, d.GetType());
-            d += 1;
+            d += 2;
             Console.WriteLine("Value: {0} \tType: {1}", d, d.GetType());
             d = "Text";
             Console.WriteLine("Value: {0} \tType: {1}", d, d.GetType());
-            d = 1 + "1";
+            d = 3 + "2";
             Console.WriteLine("Value: {0} \tType: {1}",d, d.GetType());
             
             var asm = Assembly.GetExecutingAssembly();
@@ -23,6 +25,9 @@ namespace AdvancedCSharp.Samples.Dynamic
             Console.WriteLine("\nType is: {0} \nPropertyFactor property value is: {1}", d.GetType(), d.PropertyFactor);
             Console.WriteLine("Sum 0 + 2 = {0}", d.Sum(2));
             var sumBefore = d.Sum();
+
+            d.sadljkfjaefiojwqflaksjfwqoeij();
+
             d.Divide();
             d.IncrementField();
             var sumAfter = d.Sum();

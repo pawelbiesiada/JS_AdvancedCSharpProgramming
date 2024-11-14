@@ -22,7 +22,7 @@
         // Methods
         public void Drive(int duration)
         {
-            Distance = CalculateDistance(_speed, duration);
+            Distance += CalculateDistance(_speed, duration);
         }
 
         public bool IsServiceCheckNeeded()

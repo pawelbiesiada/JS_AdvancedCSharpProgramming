@@ -4,8 +4,7 @@ using System.ServiceModel;
 
 namespace WCFService
 {
-    [ServiceContract(Namespace = "WCFService.Standard", Name = "ShapeTransformation", SessionMode = SessionMode.Required)]
-
+    [ServiceContract]
     public interface IShapeTransformation
     {
         [OperationContract(Name = "GetRectangle")]

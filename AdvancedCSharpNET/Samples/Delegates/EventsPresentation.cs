@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Transactions;
 
 namespace AdvancedCSharp.Samples.Delegates
 {
@@ -12,7 +13,7 @@ namespace AdvancedCSharp.Samples.Delegates
         }
     }
 
-    class EventsPresentation
+    class EventsPresentation : IDisposable
     {
         public delegate void MessageEventHandler(object obj, MessageEventArgs eventArgs);
 
@@ -23,7 +24,24 @@ namespace AdvancedCSharp.Samples.Delegates
         {
             PreAction += Print;
             PreAction += Print;
+
+            PreAction += (o, e) => Console.WriteLine(o);
+
             PostAction += Print;
+        }
+
+        public void Dispose()
+        {
+            PreAction -= Print;
+            PreAction -= Print;
+
+            PreAction -= (o, e) => Console.WriteLine(o);
+
+
+            foreach (var e in PreAction.GetInvocationList())
+            {
+                PreAction -= (MessageEventHandler)e;
+            }
         }
 
         static void Main()
@@ -43,6 +61,8 @@ namespace AdvancedCSharp.Samples.Delegates
 
         private void Print(object obj, MessageEventArgs eventArgs)
         {
+
+
             var message = eventArgs.Message;
 
             Console.WriteLine(message);

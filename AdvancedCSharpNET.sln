@@ -21,6 +21,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsynchronousWPF", "Asynchro
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DIProject", "DiProject\DIProject.csproj", "{419815D7-4F2A-453B-B472-B953C362AE41}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject1", "TestProject1\TestProject1.csproj", "{1ADB04CC-E543-4AF6-B3E3-99160B9E8142}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeaturedPlugin1", "FeaturedPlugin1\FeaturedPlugin1.csproj", "{73A8BC19-4B6E-4763-9CCE-D1D198B2C834}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +63,14 @@ Global
 		{419815D7-4F2A-453B-B472-B953C362AE41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{419815D7-4F2A-453B-B472-B953C362AE41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{419815D7-4F2A-453B-B472-B953C362AE41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1ADB04CC-E543-4AF6-B3E3-99160B9E8142}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ADB04CC-E543-4AF6-B3E3-99160B9E8142}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ADB04CC-E543-4AF6-B3E3-99160B9E8142}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1ADB04CC-E543-4AF6-B3E3-99160B9E8142}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73A8BC19-4B6E-4763-9CCE-D1D198B2C834}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73A8BC19-4B6E-4763-9CCE-D1D198B2C834}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73A8BC19-4B6E-4763-9CCE-D1D198B2C834}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73A8BC19-4B6E-4763-9CCE-D1D198B2C834}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

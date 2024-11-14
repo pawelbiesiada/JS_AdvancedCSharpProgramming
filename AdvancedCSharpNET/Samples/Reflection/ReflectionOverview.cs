@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Reflection;
 using System.IO;
+using System.Linq;
+using AdvancedCSharp.Samples.Class;
 
 namespace AdvancedCSharp.Samples.Reflection
 {
@@ -13,6 +15,25 @@ namespace AdvancedCSharp.Samples.Reflection
 
             Console.WriteLine("Assembly Full Name:");
             Console.WriteLine(assembly.FullName);
+
+            var classCar = assembly.DefinedTypes.FirstOrDefault(c => c.IsClass && c.Name.StartsWith("Car"));
+
+           // classCar.Attributes
+
+            if (classCar != null)
+            {
+                var m = classCar.GetMethod("Drive");
+                //m.
+
+                var c = new Car(10);
+
+                c.Distance = 3;
+
+                Console.WriteLine($"Property {nameof(c.Distance)} has value {c.Distance}");
+
+
+
+            }
 
             AssemblyName assemblyName = assembly.GetName();
             Console.WriteLine("\nName: {0}", assemblyName.Name);
