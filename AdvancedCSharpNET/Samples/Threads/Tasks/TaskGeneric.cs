@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
+using AdvancedCSharp.Samples.Class;
 
 namespace AdvancedCSharp.Samples.Tasks
 {
@@ -11,6 +12,7 @@ namespace AdvancedCSharp.Samples.Tasks
             //Non-generic Task - Action
             var task = Task.Factory.StartNew(() => { Task.Delay(1000).Wait(); return string.Format("Hello!!!"); });
             task.Wait();
+            
             Console.WriteLine(task.Result);
 
 
@@ -20,10 +22,18 @@ namespace AdvancedCSharp.Samples.Tasks
                         {
                             Task.Delay(5000).Wait(); Console.WriteLine("Hello {0}!!!", str);
                         }, name);
-            task2.Wait();
 
-            //Generic Task - Func<object, string>
+            ///
+            task2.Wait();
+            ///
+            ///
+
+
+            //Generic Task - Func<object, T>   Func<T>
             var task3 = new Task<string>(SayHello, name);
+
+
+
             task3.Start();
             string value = task3.Result;
             Console.WriteLine("Ready & Waiting.");

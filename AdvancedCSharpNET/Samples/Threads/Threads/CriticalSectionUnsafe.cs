@@ -20,6 +20,10 @@ namespace AdvancedCSharp.Samples.Threads
             t1.Start();
             t2.Start();
 
+            //
+            //
+            //
+
             t1.Join();
             t2.Join();
 
@@ -30,11 +34,19 @@ namespace AdvancedCSharp.Samples.Threads
             Console.ReadKey();
         }
 
+        private static object locker = new object();
+
         private static void Increment1()
         {
             while (_commonCounter < 10_000_000)
             {
-                _commonCounter++;
+                lock (locker)
+                {
+                    if (_commonCounter >= 10_000_000)
+                        return;
+
+                    _commonCounter++;
+                }
                 _thread1Counter++;
             }
         }
@@ -42,7 +54,13 @@ namespace AdvancedCSharp.Samples.Threads
         {
             while (_commonCounter < 10_000_000)
             {
-                _commonCounter++;
+                lock (locker)
+                {
+                    if (_commonCounter >= 10_000_000)
+                        return;
+
+                    _commonCounter++;
+                }
                 _thread2Counter++;
             }
         }

@@ -32,6 +32,18 @@ namespace AdvancedCSharp.Samples.Delegates
 
             operation(3,2);
 
+
+            operation.Invoke(3, 2);
+
+
+
+            var r = operation.BeginInvoke(3, 2, null, null);
+            //
+            //
+            var result = operation.EndInvoke(r);
+
+
+
             var list = new List<string>();
             list.Where(el => el.StartsWith("M"));
             list.Where(el => { return el.StartsWith("M"); });

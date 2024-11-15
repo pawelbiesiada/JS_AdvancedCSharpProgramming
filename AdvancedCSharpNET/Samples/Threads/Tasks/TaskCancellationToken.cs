@@ -37,6 +37,10 @@ namespace AdvancedCSharp.Samples.Threads.Tasks
             {
                 if (ct.IsCancellationRequested)
                 {
+                    ///
+                    ///
+
+
                     ct.ThrowIfCancellationRequested(); //throws OperationCanceledException
                 }
                 Thread.Sleep(1000);

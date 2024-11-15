@@ -1,6 +1,7 @@
 ﻿using System;
 namespace AdvancedCSharp.Samples.Patterns
 {    
+
     internal class FactoryMethodPattern
     {
         static void Main(string[] args)

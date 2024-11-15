@@ -16,6 +16,9 @@ namespace AdvancedCSharp.Samples.RegEx
                       "${day}-${month}-${year}", RegexOptions.None,
                       TimeSpan.FromMilliseconds(150));
 
+
+            var day = matchd.Groups["day"].Value;
+
             Console.WriteLine("Original string: {0}", dateStr);
             Console.WriteLine("Converted string: {0}", convertedDate);
             var matched = Regex.Match(dateStr, datePattern);

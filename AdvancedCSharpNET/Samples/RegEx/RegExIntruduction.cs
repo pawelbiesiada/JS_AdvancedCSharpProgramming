@@ -5,15 +5,16 @@ namespace AdvancedCSharp.Samples.RegEx
 {
     class RegExIntruduction
     {
-        const string AddressCodePattern = @"\d{2}-\d{3}";
-        //const string AddressCodePattern = @"\b[0-9]{2}-[0-9]{3}\b";
-        const string HtmlTagsPatternGreedy = "<.+>";
-        const string HtmlTagsPatternLazy = "<.+?>";
+        //const string AddressCodePattern = @"\d{2}-\d{3}";
+        const string AddressCodePattern = @"\b[0-9]{2}-[0123456789]{3}";
+        const string HtmlTagsPatternGreedy = "<.+>";  //\b[A-Za-z]+\b
+        const string HtmlTagsPatternLazy = @"<.+?>"; 
 
         static void Main()
         {
-            Regex regex = new Regex(AddressCodePattern);
-            var inputSentence = "Mój kod poc00-000ztowy to 00-001 w Warszawie";
+
+            Regex regex = new Regex(AddressCodePattern, RegexOptions.Singleline | RegexOptions.IgnoreCase | RegexOptions.Compiled);
+            var inputSentence = "Mój kod 00-000ztowy to 00-001 w Warszawie";
             Regex.Match(inputSentence, AddressCodePattern);
             var match = regex.Matches(inputSentence);
             if (match[0].Success)
